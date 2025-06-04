@@ -4,16 +4,17 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta name="theme-color" content="#10B981" />
-  <link rel="manifest" href="/manifest.json" />
-  <link rel="apple-touch-icon" href="/icon-192.png" />
+  <link rel="manifest" href="public/manifest.json" />
+  <link rel="apple-touch-icon" href="public/icon-192.png" />
   <title>Plano Diário de Confiança</title>
 </head>
 <body>
-  <div id="root"></div>
+  <h1>App de Confiança</h1>
+  <p>Esta é a base da tua PWA. Instala no telemóvel e começa o teu plano diário!</p>
   <script>
     if ("serviceWorker" in navigator) {
       window.addEventListener("load", () => {
-        navigator.serviceWorker.register("/service-worker.js").catch(console.error);
+        navigator.serviceWorker.register("public/service-worker.js").catch(console.error);
       });
     }
   </script>
